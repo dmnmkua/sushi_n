@@ -6,9 +6,11 @@ import registerServiceWorker from './registerServiceWorker';
 
 const hrefData = 'https://spreadsheets.google.com/feeds/list/1YDRS3wNHewTTo_MmL9wd9H2WIidLlhGeP_Bx_V9C3QI/od6/public/values?alt=json';
 
-const data = fetch(hrefData)
-	.then((response) => response.json());
-console.log(data);
+fetch(hrefData)
+	.then(response => response.json())
+	.then(result => renderCards(result.feed.entry));
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function renderCards(db) {
+	ReactDOM.render(<App db={db} />, document.getElementById('root'));
+}
 registerServiceWorker();

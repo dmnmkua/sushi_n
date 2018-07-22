@@ -3,10 +3,19 @@ import './App.css';
 import Header from './components/Header.jsx'
 
 class App extends Component {
+	constructor(props) {
+		super(props)
+
+		this.cards = this.props.db.filter(item => item.gsx$name.$t !== '');
+	}
   render() {
     return (
       <div className="App">
-        <Header />
+      {
+      	this.cards.map((item, index) =>
+      		<Header key={index} title={item.gsx$name.$t} />
+  		)
+      }
       </div>
     );
   }
