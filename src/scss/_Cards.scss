@@ -1,9 +1,12 @@
 .Cards {
-  display: -webkit-flex;
-  display: -ms-flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  background: $bgColor;
   width: 100%;
   max-width: 1200px;
+
+  @media (max-width: $sm) {
+    justify-content: center;
+  }
 }

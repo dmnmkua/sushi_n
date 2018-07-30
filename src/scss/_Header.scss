@@ -1,0 +1,88 @@
+.Header {
+	max-width: 1200px;
+	width: 100%;
+	background: $bgColor;
+	color: $textColor;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+	border-bottom: 1px solid $textColor;
+
+	@media (max-width: $xs) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.Header__logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 100px;
+}
+
+.Header__logo-image {
+	width: 100%;
+}
+
+.Header__logo-name {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.Header__info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+
+	@media (max-width: $xs) {
+		align-items: center;
+	}
+}
+
+.Header__info-free {
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-weight: 600;
+	margin-bottom: auto;
+}
+
+.Header__info-tel {
+	color: inherit;
+	text-decoration: none;
+	margin: 5px 0;
+}
+
+.Header__info-work-time {
+	margin: 5px 0;
+	text-transform: uppercase;
+}
+
+.Header__soc-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	margin: 5px 0;
+}
+
+.Header__soc-item {
+
+	&:not(:last-child) {
+		margin-right: 15px;
+	}
+}
+
+.Header__soc-link {
+	color: inherit;
+	transition: .1s;
+	font-size: 1.5rem;
+
+	&:hover i {
+		opacity: .7;
+		transform: rotate(10deg);
+	}
+}

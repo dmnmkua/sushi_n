@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../styles/Nav.css';
 
 export default class Nav extends Component {
   constructor(props) {
@@ -15,9 +14,9 @@ export default class Nav extends Component {
   render() {
     return (
       <div className="Nav">
-        <div className="Nav__title">
-          Menu
-        </div>
+        {/*<h2 className="Nav__title">
+                  Menu
+                </h2>*/}
 
         <nav className="Nav__navigation">
           <ul className="Nav__list">

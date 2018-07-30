@@ -1,64 +1,39 @@
-* {
-  box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: sans-serif; }
-
 .Card {
-  width: calc(100% / 4 - 30px);
+  border: 1px solid #000;
+  width: calc(100% / 3 - 30px);
   margin: 15px;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  padding: 10px;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
   transition: .1s;
-  text-align: center;
-  border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  @media (max-width: 1000px) {
-    .Card {
-      width: calc(100% / 3 - 30px); } }
-  @media (max-width: 768px) {
-    .Card {
-      width: calc(100% / 2 - 30px); } }
-  @media (max-width: 450px) {
-    .Card {
-      width: calc(100% - 30px);
-      max-width: 80%; } }
 
 .Card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-
-.Card__image {
-  width: 100%;
-  display: block;
-  border-radius: 5px;
-  height: auto; }
-
-.Card__name {
-  padding: 10px 5px;
-  text-transform: uppercase;
-  color: #a61f22;
-  font-weight: 600; }
 
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(./img/bg.jpg) no-repeat left center fixed;
+  background: url(../img/bg.jpg) no-repeat left center fixed;
   background-size: cover;
   min-height: 100vh; }
 
 .Header {
   max-width: 1200px;
   width: 100%;
-  background: rgba(217, 211, 184, 0.8);
   color: #a61f22;
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
-  border-bottom: 1px solid #a61f22; }
-  @media (max-width: 450px) {
+  padding: 10px 20px; }
+  @media (max-width: 500px) {
     .Header {
       flex-direction: column;
       align-items: center; } }
@@ -83,7 +58,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between; }
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     .Header__info {
       align-items: center; } }
 
@@ -122,99 +97,75 @@ body {
 
 .Nav {
   width: 100%;
-  max-width: 100%;
-  background: rgba(217, 211, 184, 0.8);
-  color: #a61f22;
+  max-width: 1200px;
+  padding: 10px;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
-  justify-content: center;
-  align-items: center; }
-  @media (max-width: 768px) {
-    .Nav {
-      position: fixed;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: auto;
-      align-items: flex-start;
-      width: 100%;
-      max-width: 350px;
-      padding-top: 50px; } }
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .Nav__title {
-  text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 24px;
-  margin: 5px 0; }
+  font-size: 24px; }
 
 .Nav__navigation {
-  width: 100%; }
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center; }
 
 .Nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   justify-content: center; }
-  @media (max-width: 768px) {
-    .Nav__list {
-      flex-direction: column;
-      justify-content: flex-start; } }
 
 .Nav__item {
   padding: 10px 30px;
   text-transform: uppercase;
   cursor: pointer;
+  background: yellow;
+  color: red;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
   transition: .1s;
-  user-select: none;
-  text-align: center; }
+  user-select: none; }
 
 .Nav__item:hover {
-  background: rgba(255, 255, 255, 0.5); }
+  background: orange;
+  color: white; }
 
 .Cards {
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  background: rgba(217, 211, 184, 0.8);
   width: 100%;
   max-width: 1200px; }
-  @media (max-width: 768px) {
-    .Cards {
-      justify-content: center; } }
 
 .Card {
-  width: calc(100% / 4 - 30px);
+  border: 1px solid #000;
+  width: calc(100% / 3 - 30px);
   margin: 15px;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  padding: 10px;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
   transition: .1s;
-  text-align: center;
-  border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  @media (max-width: 1000px) {
-    .Card {
-      width: calc(100% / 3 - 30px); } }
-  @media (max-width: 768px) {
-    .Card {
-      width: calc(100% / 2 - 30px); } }
-  @media (max-width: 450px) {
-    .Card {
-      width: calc(100% - 30px);
-      max-width: 80%; } }
 
 .Card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-
-.Card__image {
-  width: 100%;
-  display: block;
-  border-radius: 5px;
-  height: auto; }
-
-.Card__name {
-  padding: 10px 5px;
-  text-transform: uppercase;
-  color: #a61f22;
-  font-weight: 600; }

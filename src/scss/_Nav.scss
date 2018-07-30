@@ -1,0 +1,59 @@
+.Nav {
+  width: 100%;
+  max-width: 100%;
+  background: $bgColor;
+  color: $textColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $sm) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 350px;
+    padding-top: 50px;
+  }
+}
+
+.Nav__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+.Nav__navigation {
+  width: 100%;
+}
+
+.Nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $sm) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.Nav__item {
+  padding: 10px 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .1s;
+  user-select: none;
+  text-align: center;
+}
+
+.Nav__item:hover {
+  background: rgba(255,255,255,.5); 
+}

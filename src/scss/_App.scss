@@ -1,0 +1,10 @@
+@import "./_Card";
+
+.App {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: url(./img/bg.jpg) no-repeat left center fixed;
+	background-size: cover;
+	min-height: 100vh;
+}

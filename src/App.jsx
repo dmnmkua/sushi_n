@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+
 import Header from './components/Header.jsx';
 import Cards from './components/Cards.jsx';
 import Nav from './components/Nav.jsx';
@@ -26,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-				<Header title="Title"/>
+				<Header />
 				<Nav _updateData={this._updateData} />
 				<Cards dish={this.state.dish} />
       </div>
