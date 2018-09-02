@@ -17,13 +17,21 @@ export default class Nav extends Component {
 
 	componentDidMount() {
 		this.menu = document.querySelector('.Nav');
-		this.overlay = document.querySelector('.Nav__overlay');
+		this.menuItems = document.querySelectorAll('.Nav__item');
+		this.menuItems[0].classList.add('Nav__item--active');
 	}
 
-	toggleMenu = e => {
+	toggleMenu = () => {
 		this.menu.classList.toggle('Nav--active');
-		this.overlay.classList.toggle('Nav__overlay--active');
-		this.setState({btnIcon: !this.state.btnIcon})
+		this.setState({btnIcon: !this.state.btnIcon});
+	}
+
+	selectItem = e => {
+		this.toggleMenu();
+
+		for(const item of this.menuItems) {
+			item.classList.remove('Nav__item--active');
+		}
 		e.target.classList.add('Nav__item--active');
 	}
 
@@ -40,7 +48,7 @@ export default class Nav extends Component {
 				</button>
 
 				<nav className="Nav__navigation">
-					<ul className="Nav__list" onClick={e => this.toggleMenu(e)}>
+					<ul className="Nav__list" onClick={e => this.selectItem(e)}>
 						{
 							this.navItem.map((item, index) =>
 								<li key={index} className="Nav__item" onClick={() => this.props._updateData(item)}>
