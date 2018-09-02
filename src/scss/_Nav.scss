@@ -11,7 +11,7 @@
 		position: fixed;
 		height: 100%;
 		left: 0;
-		top: -100%;
+		bottom: -100%;
 		width: auto;
 		align-items: flex-start;
 		width: 100%;
@@ -21,7 +21,7 @@
 
 	&--active {
 		@media (max-width: $sm) {
-			top: 0;
+			bottom: 0;
 		}
 	}
 }
