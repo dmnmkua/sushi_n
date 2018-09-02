@@ -12,7 +12,7 @@ export default class Card extends Component {
 				</div>
 
 				<button className="Card__btn-buy">
-					Купить {this.props.card.gsx$price.$t}грн.
+					Купить {this.props.card.gsx$price.$t} грн.
 				</button>
 			</div>
 		)

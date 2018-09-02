@@ -298,3 +298,23 @@ body {
   font-family: han_zi, sans-serif;
   cursor: pointer;
   outline: none; }
+
+.Footer {
+  border-top: 1px solid #a61f22;
+  padding: 10px;
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(217, 211, 184, 0.9);
+  margin-top: auto;
+  color: #a61f22;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: .8rem;
+  font-family: sans-serif; }
+
+.Footer__author {
+  font-weight: 600; }
+
+.Footer__link {
+  color: #a61f22; }

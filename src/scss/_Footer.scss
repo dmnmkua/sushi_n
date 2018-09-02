@@ -1,0 +1,22 @@
+.Footer {
+	border-top: 1px solid $textColor;
+	padding: 10px;
+	width: 100%;
+	max-width: 1200px;
+	background: $bgColor;
+	margin-top: auto;
+	color: $textColor;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	font-size: .8rem;
+	font-family: sans-serif;
+}
+
+.Footer__author {
+	font-weight: 600;
+}
+
+.Footer__link {
+	color: $textColor;
+}

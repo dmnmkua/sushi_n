@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from './components/Header.jsx';
 import Cards from './components/Cards.jsx';
 import Nav from './components/Nav.jsx';
+import Footer from './components/Footer.jsx';
 
 class App extends Component {
 	constructor(props) {
@@ -29,6 +30,7 @@ class App extends Component {
 				<Header />
 				<Nav _updateData={this._updateData} />
 				<Cards dish={this.state.dish} />
+				<Footer />
       </div>
     );
   }
