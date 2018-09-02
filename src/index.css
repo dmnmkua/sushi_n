@@ -1,9 +1,21 @@
+@font-face {
+  font-family: 'han_zi';
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/han_zi.ttf") format("truetype"), url("./fonts/han_zi.woff") format("woff"), url("./fonts/han_zi.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'china_cyr';
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/china_cyr.ttf") format("truetype"), url("./fonts/china_cyr.woff") format("woff"), url("./fonts/china_cyr.woff2") format("woff2"); }
+
 * {
   box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: sans-serif; }
+  font-family: han_zi, sans-serif; }
 
 .Card {
   width: calc(100% / 4 - 30px);
@@ -39,7 +51,21 @@ body {
   padding: 10px 5px;
   text-transform: uppercase;
   color: #a61f22;
-  font-weight: 600; }
+  font-weight: 600;
+  margin-bottom: auto; }
+
+.Card__btn-buy {
+  margin: 10px;
+  border: 1px solid #335c40;
+  color: #335c40;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 5px;
+  background: none;
+  font-family: han_zi, sans-serif;
+  cursor: pointer;
+  outline: none; }
 
 .App {
   display: flex;
@@ -58,6 +84,10 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
   border-bottom: 1px solid #a61f22; }
+  @media (max-width: 768px) {
+    .Header {
+      flex-direction: column;
+      align-items: flex-end; } }
   @media (max-width: 450px) {
     .Header {
       flex-direction: column;
@@ -67,10 +97,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100px; }
+  max-width: 100%; }
+  @media (max-width: 768px) {
+    .Header__logo {
+      flex-direction: row;
+      margin: 0;
+      margin-bottom: 20px; } }
 
 .Header__logo-image {
-  width: 100%; }
+  width: 100%;
+  max-width: 100px;
+  display: block; }
+  @media (max-width: 768px) {
+    .Header__logo-image {
+      max-width: 50px;
+      margin-right: 10px; } }
 
 .Header__logo-name {
   text-align: center;
@@ -122,7 +163,7 @@ body {
 
 .Nav {
   width: 100%;
-  max-width: 100%;
+  max-width: 1200px;
   background: rgba(217, 211, 184, 0.8);
   color: #a61f22;
   display: flex;
@@ -131,14 +172,31 @@ body {
   @media (max-width: 768px) {
     .Nav {
       position: fixed;
-      left: 0;
+      left: -100%;
       top: 0;
       bottom: 0;
       width: auto;
       align-items: flex-start;
       width: 100%;
       max-width: 350px;
-      padding-top: 50px; } }
+      padding-top: 50px;
+      transition: .2s; } }
+  @media (max-width: 768px) {
+    .Nav--active {
+      left: 0; } }
+
+.Nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: none;
+  display: none;
+  z-index: -1; }
+  @media (max-width: 768px) {
+    .Nav__overlay--active {
+      display: block; } }
 
 .Nav__title {
   text-align: center;
@@ -146,6 +204,26 @@ body {
   font-weight: bold;
   font-size: 24px;
   margin: 5px 0; }
+
+.Nav__btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: none;
+  font-size: 2.5rem;
+  color: #a61f22;
+  border: none;
+  background: rgba(217, 211, 184, 0.8);
+  border-radius: 5px;
+  outline: none;
+  transition: .2s;
+  height: 3rem;
+  width: 3rem; }
+  @media (max-width: 768px) {
+    .Nav__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
 
 .Nav__navigation {
   width: 100%; }
@@ -168,6 +246,8 @@ body {
   transition: .1s;
   user-select: none;
   text-align: center; }
+  .Nav__item--active {
+    background: rgba(255, 255, 255, 0.5); }
 
 .Nav__item:hover {
   background: rgba(255, 255, 255, 0.5); }
@@ -217,4 +297,18 @@ body {
   padding: 10px 5px;
   text-transform: uppercase;
   color: #a61f22;
-  font-weight: 600; }
+  font-weight: 600;
+  margin-bottom: auto; }
+
+.Card__btn-buy {
+  margin: 10px;
+  border: 1px solid #335c40;
+  color: #335c40;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 5px;
+  background: none;
+  font-family: han_zi, sans-serif;
+  cursor: pointer;
+  outline: none; }

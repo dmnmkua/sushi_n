@@ -26,9 +26,9 @@ export default class Header extends Component {
 
 				<figure className="Header__logo">
 					<img src="https://cdn.emojidex.com/emoji/seal/%28%E3%82%B5%E3%83%A9%E3%83%80%E5%B7%BB%29%E3%81%99%E3%81%97.png?1477147496" alt="logo" className="Header__logo-image"/>
-					<div className="Header__logo-name">
-						Logo
-					</div>
+					<figcaption className="Header__logo-name">
+						Origami
+					</figcaption>
 				</figure>
 
 				<div className="Header__info">

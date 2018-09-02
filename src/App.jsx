@@ -10,7 +10,7 @@ class App extends Component {
 
 		global.db = this.props.db;
 
-		this.cards = this.props.db.filter(item => item.gsx$name.$t !== '');
+		this.cards = this.props.db.filter(item => item.gsx$name.$t !== '' && item.gsx$show.$t === "TRUE");
 
 		global.cards = this.cards;
 

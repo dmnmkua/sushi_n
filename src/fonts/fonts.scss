@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'han_zi';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/han_zi.ttf') format('truetype'),
+    url('./fonts/han_zi.woff') format('woff'),
+    url('./fonts/han_zi.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'china_cyr';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/china_cyr.ttf') format('truetype'),
+    url('./fonts/china_cyr.woff') format('woff'),
+    url('./fonts/china_cyr.woff2') format('woff2');
+}
